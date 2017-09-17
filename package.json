@@ -1,0 +1,16 @@
+{
+  "name": "blockbot-plus-reinvite",
+  "version": "0.0.1",
+  "description": "Slack Read only Channels via blockbot plus reinvite group members",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Herwig Gans",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "@slack/client": "^3.8.1",
+    "botkit": "^0.2.2",
+    "sqlite3": "^3.1.8"
+  }
+}
