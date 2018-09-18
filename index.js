@@ -3,7 +3,7 @@
 
 var bot_token = process.env.SLACK_BLOCKBOT_BOT_TOKEN || '';
 var web_token = process.env.SLACK_API_WEB_TOKEN || '';
-var botUserName = 'blockbot';
+var botUserName = 'brobot';
 var blockBotUserId;
 
 // Using Web API for sending messages instead of the bot, because it supports no message formating
@@ -68,7 +68,7 @@ rtm.on(RTM_EVENTS.CHANNEL_JOINED, function handleRtmMessage(message) {
 
   console.log("JOINED CHANNEL: ", message.channel.name);
   web.chat.postMessage(message.channel.id, botUserName + " has been invited. " +
-                                        "*Only channel admins and owners can post at the moment!*\n" +
+                                        "*This channel is only for Incident notifications, if you have any question please!*\n" +
                                         "They can allow you to post.\n" + 
                                         "How to invite: *@" + botUserName + " add @user*", dmArgs, function () {});
 });
@@ -78,7 +78,7 @@ rtm.on(RTM_EVENTS.GROUP_JOINED, function handleRtmMessage(message) {
 
   console.log("JOINED GROUP: ", message.channel.name);
   web.chat.postMessage(message.channel.id, botUserName + " has been invited. " +
-                                        "*Only channel admins and owners can post at the moment!*\n" +
+                                        "*This channel is only for Incident notifications, if you have any question please!*\n" +
                                         "They can allow you to post.\n" + 
                                         "How to invite: *@" + botUserName + " add @user*", dmArgs, function () {});
 });
